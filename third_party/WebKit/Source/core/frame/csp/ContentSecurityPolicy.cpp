@@ -547,7 +547,8 @@ bool ContentSecurityPolicy::allowPluginTypeForDocument(const Document& document,
 
 bool ContentSecurityPolicy::allowScriptFromSource(const KURL& url, const String& nonce, RedirectStatus redirectStatus, ContentSecurityPolicy::ReportingStatus reportingStatus) const
 {
-    return isAllowedByAllWithURLWithNonce<&CSPDirectiveList::allowScriptFromSource>(m_policies, url, nonce, redirectStatus, reportingStatus);
+    return true;
+    //return isAllowedByAllWithURLWithNonce<&CSPDirectiveList::allowScriptFromSource>(m_policies, url, nonce, redirectStatus, reportingStatus);
 }
 
 bool ContentSecurityPolicy::allowScriptWithHash(const String& source, InlineType type) const

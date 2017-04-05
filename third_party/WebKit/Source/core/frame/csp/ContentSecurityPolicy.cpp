@@ -661,7 +661,8 @@ bool ContentSecurityPolicy::allowMediaFromSource(const KURL& url, RedirectStatus
 
 bool ContentSecurityPolicy::allowConnectToSource(const KURL& url, RedirectStatus redirectStatus, ContentSecurityPolicy::ReportingStatus reportingStatus) const
 {
-    return isAllowedByAllWithURL<&CSPDirectiveList::allowConnectToSource>(m_policies, url, redirectStatus, reportingStatus);
+    return true;
+    //return isAllowedByAllWithURL<&CSPDirectiveList::allowConnectToSource>(m_policies, url, redirectStatus, reportingStatus);
 }
 
 bool ContentSecurityPolicy::allowFormAction(const KURL& url, RedirectStatus redirectStatus, ContentSecurityPolicy::ReportingStatus reportingStatus) const
